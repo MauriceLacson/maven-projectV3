@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <link rel="stylesheet" href="../../../resources/css/registrants.css">
+</head>
+<body>
+
+<div id="banner">
+    <img src="../../../resources/images/logo.png" id="logo"/>
+</div>
+
+    <!-- /* Handle the flash message */-->
+    <th:block th:if="${message != null}">
+        <!-- /* The message code is returned from the @Controller */ -->
+        <div id="dismissableAlert" th:replace="fragments/alert :: alert (type=${#strings.toLowerCase(message.type)}, message=#{${message.message}(${#authentication.name})})">&nbsp;
+        </div>
+    </th:block>
+<div class="form-narrow form-horizontal">
+    <table class="table-bordered" id="regTable">
+        <tr class="table-row">
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th class="text-center">Action</th>
+        </tr>
+        <tr class="table-row" th:each="user : ${users}">
+            <td th:text="${user.fullname}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.mobile}"></td>
+            <td class="text-center">
+                <div class="btn-group btn-group-sm" role="group" aria-label="..."></div>
+                    <a th:href="@{/registrant/{id}(id=${user.id})}" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                    <a th:href="@{/deleteNow/{id}(id=${user.id})}" th:onclick="'return confirm(\'Delete permanently?\')'" class="btn btn-default"><span class="glyphicon glyphicon-trash alert-danger"></span> Delete</a>
+            </td>
+
+        </tr>
+    </table>
+</div>
+</body>
+</html>

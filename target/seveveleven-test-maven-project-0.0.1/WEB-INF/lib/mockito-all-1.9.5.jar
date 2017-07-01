@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1040, initial-scale=-2">
+    <title>Globe Portal</title>
+
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+  </head>
+  <body>
+
+  <form method="POST" action="https://broadbandstatus.globe.com.ph/fup" accept-charset="UTF-8" name="detourForm" id="detourForm" file="false" class="form" enctype="multipart/form-data"><input name="_token" type="hidden" value="Pcu15JTixu30gbofDIi0itm1QuXY82ARLBzxWOUo">
+  <input name="referrer" type="hidden" value="eyJpdiI6IlBYRks5TXBEYjBkVUNcL0IxWkE5clBBPT0iLCJ2YWx1ZSI6Imo2V0d2b1N5THhrXC9rd1liZjhNNHVRPT0iLCJtYWMiOiIwNDExNTYyZDM1ZGI3ZTkyN2EwNjBkMGFiYmNkMTMwNTAzMjFiYmU2MTM0YTE4ZDhlODY1OWJlNjI2Yjg4NDVhIn0=">
+
+      <input name="subscriberID" type="hidden" value="eyJpdiI6InEyaGhxVVJqVFo3aHJcL3ZHWUFaeUlnPT0iLCJ2YWx1ZSI6IjNHZlYxMEFlNEdQT2Y0WG1OanRsWlZERGZLSVNKNFlWTEVaVHNLK1N3SW04eFk0V3MxYndcL25Gc0Z6aFlvRVBvIiwibWFjIjoiM2RjMmI3YzlhZWRhZTFiODJkODE0ZjU0ZDRiMDI1N2VjYzlhYjA1YjY1MGQzOTRhMmY2NTMzZGFkMDIwYzFmZiJ9">
+        <input name="sessionID" type="hidden" value="eyJpdiI6ImVlc2pcL1lKUFdcL2RFZ3Bla2JTZ21yQT09IiwidmFsdWUiOiJhdkdxTmJjcHdCUXBUOFlQdjBkVk96c0dzYVwvZUFBckk0SlJDeG1JVzE2YWJLNjdWdVgyaG10UjQ1Z0paWmdodyIsIm1hYyI6ImU2YzgyYjczOTc0MDNkNDc5NTU5N2NlMWEzZDNhZjY5ZWQ5Y2NmNDQzNWUzNzdiODM3ZGJmOWNkNmMyZTAxZTUifQ==">
+  
+      <input id="state" name="state" type="hidden" value="fup">
+  
+    <div id="wrapper" class="row">
+      <header>
+        <div class="container">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <img src="https://broadbandstatus.globe.com.ph/assets/images/logo.png" class="img-responsive" id="logo" alt="Globe logo">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            
+          </div>
+        </div>
+      </header>
+      <section id="banner" class="row">
+        <div class="container">
+                      <h1><strong>Hi, Joselito!</strong> Have a wonderful day!</h1>
+
+                    <!-- <h1><b>Hi Jenny!</b> Have a wonderful day!</h1> -->
+        </div>
+      </section>
+      <section id="content" class="row">
+        <div id="information" class="container">
+
+
+          <div class="panel-row row two-column right-sm">
+                <div class="panel-container">
+                    <div class="data-usage warning almost panel">
+                        <div class="panel-heading bg">Your data usage</div>
+                        <div class="panel-body">
+                            <div class="meter-container left">
+                                <!-- Meter - Automatically computes itself based on the values you input in the <text> elements inside the #percent-values section -->
+                                <div class="percent"><p class="computed hidden"></p></div>
+                                <div class="percent-values-container">
+                                    <div class="percent-values">
+                                        <h3 class="used"><text>2.50</text> GB</h3>
+                                        <p class="out-of">out of <text>3.00</text> GB</p>
+                                    </div>
+                                </div>
+                                <div class="data-allowance">
+                                                                            <label>Daily Data Allowance</label>
+                                                                        <!-- Meter - Automatically computes itself based on the values you input in the <text> elements inside the #percent-values section -->
+                                                                            <p class="data-left"><text>0.50</text> GB left</p>
+                                                                    </div>
+                            </div>
+                            <div class="right">
+                                                                <h1><b>Warning:</b><text><b>2.50 GB</b> of May allocation used today. Minimum browsing speed may take effect upon full usage of allocation.</text></h1>
+                                                                                                <span class="row" >
+                                     Please be guided by our <button type = "submit"  name = "link" class="btn btn-link text-link-remove-padding"
+                                                                     value = "fup-80-no-vod-CATCH">Fair Use Policy</button>.
+                                 </span>
+                                
+                                <button type = "submit"
+                                                                                value = "skip-to-continue" id = "skip" name = "link">
+                                    Continue browsing
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                    <div class="panel-container">
+    <div id="plan" class="panel">
+        <div class="panel-heading">Your plan</div>
+        <div class="panel-body">
+            <h2>Globe Broadband</h2>
+            <ul id="plan-options">
+                <button class="plan-btn" type="submit" name="link" value="upgrade-plan">
+                    <li>
+                        <span class="plan-option-icon upgrade-plan"></span>
+                        <text>Upgrade to a Fibre-Fast Plan Now</text>
+                    </li>
+                </button>
+                <button class="plan-btn" type="submit" name="link" value="edit-account">
+                    <li>
+                        <span class="plan-option-icon edit-account"></span>
+                        <text>Edit Account Settings</text>
+                    </li>
+                </button>
+                <button class="plan-btn" type="submit" name="link" value="view-bill">
+                    <li>
+                        <span class="plan-option-icon view-bill"></span>
+                        <text>View your bill</text>
+                    </li>
+                </button>
+            </ul>
+        </div>
+    </div>
+</div>                            </div>
+
+    
+          
+                                    <div class="panel-row row one-column">
+    <div class="panel-container">
+        <div id="banner-1" class="panel banner">
+
+                            
+                                    <button type = "submit" class = "btn-link banner-btn" name = "link" value = "full">
+                
+                        <img src="https://broadbandstatus.globe.com.ph/assets/images/s3images/5.jpg" class="img-responsive" alt="Full">
+
+                                    </button>
+                            
+        </div>
+    </div>
+</div>                      
+          <div class="panel-row row">
+     <div class="panel-container">
+         <div id="contact-details" class="panel">
+             <div class="panel-heading"><strong>We are here for you</strong></div>
+             <div class="panel-body">
+                 <div class="listitem col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                     <span class="listitem-img" style="background-image: url('assets/images/icons/chat.png')"></span>
+                     <div class="listitem-details">
+                      <p><strong>Chat with us:</strong></p>
+                         <button class="btn btn-link" name="link" value="globe-chat">chat.globe.com.ph</button>
+                     </div>
+                 </div>
+                 <div class="listitem col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                     <span class="listitem-img" style="background-image: url('assets/images/icons/call.png')"></span>
+                     <div class="listitem-details">
+                         <p><strong>Call us:</strong></p>
+                         <button class="btn btn-link">211 or (02) 730 1000</button>
+                     </div>
+                 </div>
+                 <div class="listitem col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                     <span class="listitem-img" style="background-image: url('assets/images/icons/like.png')"></span>
+                     <div class="listitem-details">
+                         <p><strong>Like us:</strong></p>
+                         <button class="btn btn-link" name="link" value="tattoo-fb">fb.com/GlobePH</button>
+                     </div>
+                 </div>
+                 <div class="listitem col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                     <span class="listitem-img" style="background-image: url('assets/images/icons/tweet.png')"></span>
+                     <div class="listitem-details">
+                         <p><strong>Tweet us:</strong></p>
+                         <button class="btn btn-link" name="link" value="tattoo-twitter">@enjoyGLOBE</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+        </div>
+      </section>
+        <div class="row" style="visibility: hidden;">
+          <div style="margin-top: 100px;">
+<pre>
+   array(1) {
+  [0]=>
+  string(144) "------------------------------------------------------------------------------------------------------------------------------------------------"
+}
+
+</pre>
+</div>        </div>
+      <div class="row" style="visibility: hidden;">
+        <div style="margin-top: 100px;">
+<pre>
+
+    No response
+</pre>
+</div>      </div>
+    </div>
+
+    <div class="modal fade three-per-row" id="data-modal" tabindex="-1" role="dialog" aria-labelledby="dataModalLabel">
+         <div class="modal-dialog" role="document">
+           <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="/assets/imgs/icons/modal-close.png" alt="" /></button>
+               <h4 class="modal-title" id="dataModalLabel">Get more data</h4>
+               <p>One-time purchase only.</p>
+             </div>
+             <div class="modal-body">
+             <input type="hidden" id="prod_name" value="CATCH">
+             <input type="hidden" id="dsl_username" value="jcperlas@visayas.globelines.com.ph">
+             <input type="hidden" id="_token" value="Pcu15JTixu30gbofDIi0itm1QuXY82ARLBzxWOUo" />
+             <input type="hidden" id="url" value="https://broadbandstatus.globe.com.ph/volume-boost">
+             <input type="hidden" id="boost-user"
+                         data-first-name="Joselito"
+                         data-last-name="Perlas"
+                         data-account-number="832496544">
+               <div id="plans" class="row">
+                                                                            <div class="plan selected"
+                                   data-id="1"
+                      						 data-lpid="LFEDA1"
+                                   data-data_boost_variant="50GB"
+                      						 data-cost="99"
+                      						 data-cost="30"
+                           >
+                             <div class="plan-content">
+                               <h3 class="plan-title">50GB Data</h3>
+                               <p class="plan-price">P 99</p>
+                               <p class="plan-validity">Valid only for 30 days</p>
+                             </div>
+                           </div>
+                             
+                                                              <div class="plan"
+                             data-id="2"
+                						 data-lpid="LFEDB1"
+                             data-data_boost_variant="200GB"
+                						 data-cost="299"
+                						 data-cost="30"
+                     >
+                   <div class="plan-content">
+                     <h3 class="plan-title">200GB Data</h3>
+                     <p class="plan-price">P 299</p>
+                     <p class="plan-validity">Valid only for 30 days</p>
+                   </div>
+                 </div>
+               
+                                                              <div class="plan"
+                             data-id="3"
+                						 data-lpid="LFEDC1"
+                             data-data_boost_variant="300GB"
+                						 data-cost="499"
+                						 data-cost="30"
+                     >
+                   <div class="plan-content">
+                     <h3 class="plan-title">300GB Data</h3>
+                     <p class="plan-price">P 499</p>
+                     <p class="plan-validity">Valid only for 30 days</p>
+                   </div>
+                 </div>
+               
+                                                              <div class="plan"
+                             data-id="4"
+                						 data-lpid="LFEDD1"
+                             data-data_boost_variant="500GB"
+                						 data-cost="599"
+                						 data-cost="30"
+                     >
+                   <div class="plan-content">
+                     <h3 class="plan-title">500GB Data</h3>
+                     <p class="plan-price">P 599</p>
+                     <p class="plan-validity">Valid only for 30 days</p>
+                   </div>
+                 </div>
+               
+                                                              <div class="plan"
+                             data-id="5"
+                						 data-lpid="LFEDE1"
+                             data-data_boost_variant="800GB"
+                						 data-cost="799"
+                						 data-cost="30"
+                     >
+                   <div class="plan-content">
+                     <h3 class="plan-title">800GB Data</h3>
+                     <p class="plan-price">P 799</p>
+                     <p class="plan-validity">Valid only for 30 days</p>
+                   </div>
+                 </div>
+               
+                                                              <div class="plan"
+                             data-id="6"
+                						 data-lpid="LFEDF1"
+                             data-data_boost_variant="1000GB"
+                						 data-cost="999"
+                						 data-cost="30"
+                     >
+                   <div class="plan-content">
+                     <h3 class="plan-title">1000GB Data</h3>
+                     <p class="plan-price">P 999</p>
+                     <p class="plan-validity">Valid only for 30 days</p>
+                   </div>
+                 </div>
+               
+                              </div>
+                <div id="form-container" class="row">
+
+                    <div class="form-group">
+                      <label>Your mobile number</label>
+                      <input class="form-control" id="boost-mobile-number" />
+                      <span class="error-msg">This field is required.</span>
+                    </div>
+                    <div class="form-group">
+                      <label>Email address</label>
+                      <input type="email" class="form-control" id="boost-email" />
+                      <span class="error-msg">This field is required.</span>
+                    </div>
+                  <div class="form-group">
+                      <div id="boost-captcha"
+                            data-callback="recaptchaCallback"
+                            class="g-recaptcha"
+                            data-sitekey="6LchMxkUAAAAADEKcta92v4YDnkOCrzSTqro_YDe"></div>
+
+                       <span class="error-msg">Recaptcha verification is required.</span>
+                  </div>
+
+                </div>
+
+             </div>
+             <div class="modal-footer">
+              <p>Please note that processing of volume boost may take up to 4 hours.</p>
+               <button type="button" data-loading-text="Processing..."  id="volume-boost-submit">Subscribe
+               
+               </button>
+             </div>
+           </div>
+         </div>
+       </div>
+      <section id="content" class="row" style="text-align: center; padding-top: 100px;">  
+        
+    <div class="modal fade five-per-row" id="thanks-modal" tabindex="-1" role="dialog" aria-labelledby="dataModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="assets/imgs/icons/modal-close.png" alt="" /></button>
+              </div>
+              <div class="modal-body">
+                <span class="icon thanks"></span>
+                <h4>Thank you.<br /> You have purchased an additional volume boost of <span id="data-boost-selected"></span>. This will be activated in 4 hours.
+                </h4>
+                <button type="button"  data-dismiss="modal" aria-label="Close">Done</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div class="modal fade five-per-row" id="error-modal" tabindex="-1" role="dialog" aria-labelledby="dataModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="assets/imgs/icons/modal-close.png" alt="" /></button>
+              </div>
+              <div class="modal-body">
+                <h4>Request Unsuccessful.<br /> Please select volume boost to proceed.
+                </h4>
+                <button type="button">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+           </section>
+ 
+
+    <script src="/assets/js/jquery-3.1.0.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jQuery.circleProgressBar.js"></script>
+    <script src="/assets/js/raphael-min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  <br>
+  </body>
+
+  </form>
+
+</html>

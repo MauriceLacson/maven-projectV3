@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Under Construction</title>
+</head>
+<body>
+<style>
+    #body {
+        font: 20px 'PT Sans', sans-serif;
+        padding: 10%;
+        text-align: center;
+    }
+    .botn{
+        border-radius: 50px;
+        background-color: #ef2b2f;
+        width: 240px;
+        height:50px;
+        top:40%;
+        left:15%;
+        margin: 30px;
+    }
+    .botn:hover{
+        color: white;
+        border: 2px solid #176c49;
+        background: orange;
+        cursor: pointer ;
+    }
+    #banner{
+        background-image: url("assets/img/header_bg.fw.png");
+        margin-top: 3%;
+        height: 128px;
+
+    }
+    #logo{
+        background-color: white;
+        margin-left: 45%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    h1{
+        text-align: center;
+        margin: 0 25%;
+        padding: 0;
+        border-radius: 11px;
+    }
+
+</style>
+
+<div id="banner">
+    <img src="../../../resources/images/logo.png" height="130" width="99" id="logo"/>
+</div>
+
+</head>
+
+<div id = "body">
+    <h1 style="background-color: orangered">Website under construction</h1>
+    <img src="../../../resources/images/underCons.jpg" height="159" width="318"/>
+    <form>
+        <button class="botn" ><a th:href="@{/home}" style="font-size: x-large">Home</a></button>
+    </form>
+
+</div>
+</body>
+</html>

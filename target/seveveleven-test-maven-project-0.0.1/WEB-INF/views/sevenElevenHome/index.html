@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="assets/css/main.css">-->
+    <link rel="stylesheet" href="../../../resources/css/main.css">
+
+</head>
+<body style="margin: 0;">
+<script>
+    function myDropdown() {
+        var x = document.getElementById("dropdown-content");
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script>
+<!--Hidden Nav for responsive-->
+<div id="menuNav" style="">
+    <div id="hamburger" class="dropdown">
+        <span>
+            <img onclick="myDropdown()" src="../../../resources/images/hamburger.png" height="100px" width="100px">
+        </span>
+
+        <ul id="dropdown-content" class="dropdown-content">
+            <li><a th:href="@{/underConstruct}">Praesentium</a></li>
+            <li><a th:href="@{/underConstruct}">Voluptatum</a></li>
+            <li><a th:href="@{/underConstruct}">Dignissimos</a></li>
+            <li><a th:href="@{/underConstruct}">Blanditiis</a></li>
+        </ul>
+    </div>
+    <div id="searchForm">
+        <span>
+            <input id="searchBar" type="search" placeholder="">
+        </span>
+    </div>
+</div> <!--id=menuNav-->
+
+
+ <!--BANNER-->
+<div id="banner">
+    <img src="../../../resources/images/logo.png" id="logo"/>
+</div>
+
+<!-- NAVIGATION -->
+ <div id="mobileNav">
+    <nav id="navi">
+        <ul class="clear">
+            <li><a th:href="@{/underConstruct}">Praesentium</a></li>
+            <li><a th:href="@{/underConstruct}">Voluptatum</a></li>
+            <li><a th:href="@{/underConstruct}">Dignissimos</a></li>
+            <li><a th:href="@{/underConstruct}">Blanditiis</a></li>
+        </ul>
+    </nav>
+ </div> <!--id=mobileNav-->
+
+<!-- PARAGRAPH -->
+<p id="p1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem sit amet tempor</p>
+<p id="p2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+
+<!-- REGISTRATION FORM -->
+
+<section id="sec">
+    <article>Registration Form</article>
+    <div id="formMessage" style="border: 2px solid green"></div><br>
+    <div id="formStyle2">
+        <!-- /* Handle the flash message */-->
+        <th:block th:if="${message != null}">
+            <!-- /* The message code is returned from the @Controller */ -->
+            <div th:replace="fragments/alert :: alert (type=${#strings.toLowerCase(message.type)}, message=#{${message.message}(${#authentication.name})})">&nbsp;</div>
+        </th:block>
+        <form id="regForm" th:action="@{/submit}" th:object="${testForm}" method="post">
+            <label class="labelDown">
+                <span>Name</span>
+                <input type="text" class="textarea-field" id="fullname" name="fullname"  placeholder="Full Name">
+                <span class="error-field"></span>
+            </label>
+            <label class="labelDown">
+                <span>Email</span>
+                <input type="text" class="textarea-field" id="email" name="email" value="" placeholder="Email" th:classappend="${#fields.hasErrors('email')}?'has-error'" th:field="*{email}" >
+                <span class="error-field"></span>
+            </label>
+            <label class="labelDown">
+                <span>Mobile Number</span>
+                <input class="textarea-field" id="mobile" value="" placeholder="Mobile No." th:classappend="${#fields.hasErrors('mobile')}?'has-error'" th:field="*{mobile}" >
+                <span class="error-field"></span>
+            </label>
+            <label class="select labelDown"><span>Date of Birth</span>
+                <select class="textarea-field-month valid" name="DOBMonth" aria-invalid="false">
+                    <option id="DOBMonth"> MONTH </option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <span id="arrMonth" class="arrowDown"></span>
+
+                <select class="textarea-field-day"  name="DOBDay">
+                    <option id="DOBDay"> DAY </option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <span id="arrDay" class="arrowDown"></span>
+
+                <select class="textarea-field-year" name="DOBYear">
+                    <option id="DOBYear"> YEAR </option>
+                    <option value="2000">2000</option>
+                    <option value="1999">1999</option>
+                    <option value="1998">1998</option>
+                    <option value="1997">1997</option>
+                    <option value="1996">1996</option>
+                    <option value="1995">1995</option>
+                    <option value="1994">1994</option>
+                    <option value="1993">1993</option>
+                    <option value="1992">1992</option>
+                    <option value="1991">1991</option>
+                    <option value="1990">1990</option>
+                    <option value="1989">1989</option>
+                    <option value="1988">1988</option>
+                    <option value="1987">1987</option>
+                    <option value="1986">1986</option>
+                    <option value="1985">1985</option>
+                    <option value="1984">1984</option>
+                    <option value="1983">1983</option>
+                    <option value="1982">1982</option>
+                    <option value="1981">1981</option>
+                    <option value="1980">1980</option>
+                    <option value="1979">1979</option>
+                    <option value="1978">1978</option>
+                    <option value="1977">1977</option>
+                    <option value="1976">1976</option>
+                    <option value="1975">1975</option>
+                    <option value="1974">1974</option>
+                    <option value="1973">1973</option>
+                    <option value="1972">1972</option>
+                    <option value="1971">1971</option>
+                    <option value="1970">1970</option>
+                    <option value="1969">1969</option>
+                    <option value="1968">1968</option>
+                    <option value="1967">1967</option>
+                    <option value="1966">1966</option>
+                    <option value="1965">1965</option>
+                    <option value="1964">1964</option>
+                    <option value="1963">1963</option>
+                    <option value="1962">1962</option>
+                    <option value="1961">1961</option>
+                    <option value="1960">1960</option>
+                    <option value="1959">1959</option>
+                    <option value="1958">1958</option>
+                    <option value="1957">1957</option>
+                    <option value="1956">1956</option>
+                    <option value="1955">1955</option>
+                    <option value="1954">1954</option>
+                    <option value="1953">1953</option>
+                    <option value="1952">1952</option>
+                    <option value="1951">1951</option>
+                    <option value="1950">1950</option>
+                    <option value="1949">1949</option>
+                    <option value="1948">1948</option>
+                    <option value="1947">1947</option>
+                </select>
+                <span id="arrYear" class="arrowDown"></span>
+            </label>
+            <br>
+            <label class="labelDown">
+                <span id="spGender">Gender</span>
+                <span id="control-group">
+                                  <div>
+                                      <label class="control control--radio labelSide">Male
+                                          <input type="radio" name="radio">
+                                          <div class="control__indicator"></div>
+                                      </label>
+                                      <label class="control control--radio labelSide">Female
+                                          <input type="radio" name="radio">
+                                          <div class="control__indicator"></div>
+                                      </label>
+                                  </div>
+                          </span>
+            </label><br>
+            <label class="paraSmall labelDown"><span id="sp1"><input type="checkbox" value=""></span><span id="sp2">Proin sit amet lectus venenatis, consectetur magna vitae, convallis diam. Nullam iaculis.</span></label>
+            <label id="clearfix labelDown">
+                <span>&nbsp;</span>
+                <input id="submit" type="submit">
+            </label>
+        </form>
+    </div>
+    <!-- Card Image -->
+    <img src="../../../resources/images/cards.png">
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <nav class="navList">SUSPENDISSE
+        <ul class="ul2">
+            <li class="Fcase"><a class="linker"  th:href="@{/underConstruct}">Praesentium</a></li>
+            <li class="Fcase"><a class="linker"  th:href="@{/underConstruct}">Voluptatum</a></li>
+            <li class="Fcase"><a class="linker"  th:href="@{/underConstruct}">Dignissimos</a></li>
+            <li class="Fcase"><a class="linker"  th:href="@{/underConstruct}">Blanditiis</a></li>
+        </ul>
+    </nav>
+    <nav class="navList">PORTA
+        <ul class="ul2">
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Mauris </a></li>
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Suscipit </a></li>
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">At ipsum</a></li>
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Vehicula</a></li>
+        </ul>
+    </nav>
+    <nav class="navList">FEUGIAT
+        <ul class="ul2">
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Pellentesque</a></li>
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Accumsan </a></li>
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Velit in urna</a></li>
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Faucibus </a></li>
+        </ul>
+    </nav>
+    <nav class="navList">PLACERAT
+        <ul class="ul2">
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Vitae</a></li>
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Convallis</a></li>
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Augue </a></li>
+            <li class="Fcase"><a class="linker" th:href="@{/underConstruct}">Aliquam</a></li>
+        </ul>
+    </nav>
+</footer>
+
+    <script th:src="@{../../../resources/js/jquery-1.9.js}"></script>
+    <script th:src="@{../../../resources/js/app.js}"></script>
+    <!--<script th:src="@{../../../resources/js/jquery.validate.js}"></script>-->
+    <!--<script src="js/7eleven.js"></script>-->
+    <!--<script th:src="@{../../../resources/js/formvalidation.js}"></script>-->
+</body>
+</html>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="seveveleven-test-maven-project:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="seveveleven-test-maven-project-0.0.1.war">
+      <element id="artifact" artifact-name="seveveleven-test-maven-project:war exploded" />
+    </root>
+  </artifact>
+</component>
